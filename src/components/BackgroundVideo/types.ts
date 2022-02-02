@@ -2,6 +2,7 @@ export interface VideoProps {
   videoWidth?: string;
   videoHeight?: string;
   videoRadius?: string;
+  videoOverlay?: string;
   videoSrc: string;
   videoType: string;
 }

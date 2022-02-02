@@ -8,9 +8,14 @@ const BackgroundVideo: React.FC<VideoProps> = ({
   videoSrc,
   videoType,
   videoHeight,
+  videoOverlay,
 }: VideoProps) => {
   return (
-    <Styled.VideoOverlay videoWidth={videoWidth} videoHeight={videoHeight}>
+    <Styled.VideoOverlay
+      videoWidth={videoWidth}
+      videoHeight={videoHeight}
+      videoOverlay={videoOverlay}
+    >
       <Styled.Video
         autoPlay
         muted
