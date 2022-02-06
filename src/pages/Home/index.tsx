@@ -1,19 +1,16 @@
 import React from "react";
-import VideoSrc from "../../assets/oldwalls.mp4";
-import BackgroundVideo from "../../components/BackgroundVideo";
-import HellFireFx from "../../components/HellFireFx";
+import * as Styled from "./styles";
+import WaveBackground from "../../components/WaveBackground";
+import FontTitle from "../../components/FontTitle";
+import LoadingScreen from "../../components/LoadingScreen";
 
 const Home: React.FC = () => {
   return (
-    <HellFireFx>
-      <BackgroundVideo
-        videoSrc={VideoSrc}
-        videoWidth="100vw"
-        videoHeight="100vh"
-        videoType="video/mp4"
-        videoOverlay="linear-gradient(90deg, rgba(134,1,17,1) 0%, rgba(255,255,255,0) 50%, rgba(134,1,17,1) 100%)"
-      />
-    </HellFireFx>
+    <Styled.Container>
+      <LoadingScreen />
+      <FontTitle title="AZZURRA" />
+      <WaveBackground />
+    </Styled.Container>
   );
 };
 
