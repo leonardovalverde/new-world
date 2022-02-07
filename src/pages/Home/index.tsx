@@ -8,7 +8,7 @@ const Home: React.FC = () => {
   return (
     <Styled.Container>
       <LoadingScreen />
-      <FontTitle title="AZZURRA" />
+      <FontTitle title="AZZURA" />
       <WaveBackground />
     </Styled.Container>
   );
