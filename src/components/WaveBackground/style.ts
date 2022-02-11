@@ -21,7 +21,7 @@ export const FlipedSmoke = styled(Smoke)`
 
 export const Mage = styled.img`
   position: absolute;
-  max-height: 90vh;
+  max-height: 70vh;
   z-index: 2;
 `;
 

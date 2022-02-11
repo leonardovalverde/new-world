@@ -94,7 +94,7 @@ SineWaveGenerator.prototype.drawSine = function (time, options) {
   var amp = this.amplitude;
 
   // Center the waves
-  var yAxis = this.height / 2.8;
+  var yAxis = this.height / 2.1;
 
   // Styles
   this.ctx.lineWidth = lineWidth * this.dpr;

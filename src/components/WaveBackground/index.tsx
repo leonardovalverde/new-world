@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from "react";
-import Mage from "../../assets/svg/mage.svg";
+import React, { useEffect, useRef, useState } from "react";
+import Mage from "../../assets/images/heroFrontPage.png";
 import MageBackground from "../../assets/svg/magebg.svg";
 import { SineWaveGenerator } from "../../utils/WaveGeneretor/WaveGenerator";
 import * as Styled from "./style";
@@ -49,13 +49,27 @@ const WaveBackground: React.FC = () => {
       resizeEvent: function () {
         var gradient = this.ctx.createLinearGradient(0, 0, this.width, 0);
         gradient.addColorStop(0, "rgba(138,43,226,1)");
-        gradient.addColorStop(0.5, "rgba(148,0,211,1)");
+        gradient.addColorStop(0.5, "#7AFBFD");
         gradient.addColorStop(1, "rgba(153,50,204,1)");
+
+        var gradientVariant = this.ctx.createLinearGradient(
+          0,
+          0,
+          this.width,
+          0
+        );
+        gradientVariant.addColorStop(0, "rgba(138,43,226,1)");
+        gradientVariant.addColorStop(0.5, "rgba(148,0,211,1)");
+        gradientVariant.addColorStop(1, "#7AFBFD");
 
         var index = -1;
         var length = this.waves.length;
         while (++index < length) {
-          this.waves[index].strokeStyle = gradient;
+          if (index < 2) {
+            this.waves[index].strokeStyle = gradient;
+          } else {
+            this.waves[index].strokeStyle = gradientVariant;
+          }
         }
 
         // Clean Up
